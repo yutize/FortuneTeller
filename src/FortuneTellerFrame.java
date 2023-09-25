@@ -15,7 +15,7 @@ public class FortuneTellerFrame extends JFrame {
     public FortuneTellerFrame() {
         super("Fortune Teller");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(600, 600);
+        setSize(700, 700);
         setResizable(false);
         setLocationRelativeTo(null);
 
@@ -35,14 +35,14 @@ public class FortuneTellerFrame extends JFrame {
 
         titleLabel = new JLabel("Fortune Teller", JLabel.CENTER);
         titleLabel.setFont(new Font("Arial", Font.BOLD, 48));
-        ImageIcon icon = new ImageIcon("fortune-teller.png");
-        titleLabel.setIcon(icon);
+        ImageIcon iconimage = new ImageIcon("fort.png");
+        titleLabel.setIcon(iconimage);
         titleLabel.setVerticalTextPosition(JLabel.BOTTOM);
         titleLabel.setHorizontalTextPosition(JLabel.CENTER);
 
         fortuneArea = new JTextArea();
         fortuneArea.setEditable(false);
-        fortuneArea.setFont(new Font("Arial", Font.PLAIN, 24));
+        fortuneArea.setFont(new Font("Algerian", Font.PLAIN, 24));
 
         JScrollPane scrollPane = new JScrollPane(fortuneArea);
 
@@ -58,8 +58,6 @@ public class FortuneTellerFrame extends JFrame {
         quitButton.addActionListener((ActionEvent e) -> {
             System.exit(0);
         });
-
-        // Add the components to the JFrame
         add(titleLabel, BorderLayout.NORTH);
         add(scrollPane, BorderLayout.CENTER);
 
